@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            font-family: monospace;
+            text-align: center;
+            font-size: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="heading">Data from Dummy Json</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="post : ${index}">
+                <td th:text="${post.userId}"></td>
+                <td th:text="${post.id}"></td>
+                <td th:text="${post.title}"></td>
+                <td th:text="${post.body}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
