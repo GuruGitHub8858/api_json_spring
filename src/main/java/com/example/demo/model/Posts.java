@@ -1,9 +1,17 @@
 package com.example.demo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="jsonData")
 public class Posts {
+	
     private int userId;
+    @Id
     private int id;
+    @Column(length=1000)
     private String title;
+    @Column(length=1000)
     private String body;
 	public int getUserId() {
 		return userId;
